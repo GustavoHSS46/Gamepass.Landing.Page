@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 300vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+header {
+    position: relative;
+    z-index: 9998;
+    height: 10vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.container-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    left: 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+    height: 100%;
+    width: 20%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.border-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 100px;
+    transition: 0.75s;
+}
+
+.border-logo:hover {
+    background-color: white;
+}
+
+.border-logo:hover .xbox-icon svg{
+    filter: invert(0%);
+}
+
+.xbox-icon {
+    position: relative;
+    z-index: 999;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.xbox-icon svg {
+    transition: 1.50s;
+    height: 100%;
+    width: 100%;
+    filter: invert(100%);
+    object-fit: cover;
+}
+
+.title-header {
+    color: white;
+    position: relative;
+    left: 5%;
+    cursor: default;
+    font-size: larger;
+}
+
+.title-svg {
+    position: relative;
+    top: -2%;
+    left: 8%;
+    cursor: default;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.title-svg svg {
+    height: 100%;
+    width: 100%;
+    filter: invert(100%);
+    object-fit: cover;
+}
+
+.more {
+    display: flex;
+    flex-direction: reverse;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+    height: 100%;
+    width: 40%;
+    left: 5%;
+}
+
+.account {
+    position: relative;
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 100%;
+    background-color: gray;
+}
+
+.account svg {
+    height: 100%;
+    width: 70%;
+    filter: invert(100%);
+}
+
+.pesquisar {
+    display: flex;
+    position: relative;
+    z-index: 9998;
+    align-items: center;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    color: grey;
+    transition: 1s;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.pesquisar svg {
+    position: relative;
+    left: -25%;
+    height: 70%;
+    width: 70%;
+    filter: invert(100%);
+}
+
+.pesquisar h2 {
+    position: relative;
+    left: -45%;
+}
+
+.entrar {
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    cursor: pointer;
+    height: 2.5rem;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    letter-spacing: 2px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    background-color: green; 
+}
+
+.hover-brabro:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+
+main {
+    position: absolute;
+    height: 200vh;
+    width: 100%;
+    top: 0vh;
+    background-color: rgba(0, 0, 0, 1);
+    left: 0;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    top: 6%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 35%;
+    border-radius: 5px;
+    overflow: hidden; 
+    display: none;
+    box-shadow: 0 2px 6px 0 ;
+}
+
+.carousel-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.carousel-btn {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.255);
+    box-shadow: 0 2px 6px 0;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-btn-active {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-item-active {
+    display: block;
+}
+
+.popular {
+    position: relative;
+    top: 10%;
+    left: 5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 90%;
+    height: 20%;
+}
+
+.title-games-carousel{
+    position: absolute;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.games-carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 90%;
+}
+
+.games {
+    display: flex;
+    margin-top: 5%;
+    flex-direction: row;
+    height: 100%;
+    margin-right: 5%;
+    min-width: 25%;
+    overflow: hidden;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.games img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
