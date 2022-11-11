@@ -10,20 +10,35 @@ body {
     height: 300vh;
     width: 100vw;
     overflow-x: hidden;
-    background-color: black;
 }
 
 header {
     position: relative;
-    z-index: 9998;
+    z-index: 9999;
     height: 10vh;
     width: 100%;
     top: 0;
     left: 0;
 }
 
+.bg-header {
+    position: absolute;
+    z-index: -9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg-header img {
+    height: 100%;
+    width: 100%;
+    filter: brightness(40%);
+    object-fit: cover;
+}
+
 .container-header {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +54,6 @@ header {
     height: 100%;
     width: 20%;
     left: 5%;
-    background-color: rgba(0, 0, 0, 1);
 }
 
 .border-logo {
@@ -182,11 +196,11 @@ header {
 
 main {
     position: absolute;
+    z-index: 999;
     height: 200vh;
     width: 100%;
     top: 0vh;
-    background-color: rgba(0, 0, 0, 1);
-    left: 0;
+    left: 0;    
 }
 
 .carousel {
@@ -242,6 +256,7 @@ main {
 
 .carousel-item-active {
     display: block;
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .popular {
@@ -256,6 +271,9 @@ main {
 
 .title-games-carousel{
     position: absolute;
+    top: 30%; 
+    left: 6%;
+    transform: translate(-6%, -30%);
     font-family: 'Bebas Neue', cursive;
     color: white;
     letter-spacing: 2px;
@@ -275,7 +293,7 @@ main {
     flex-direction: row;
     height: 100%;
     margin-right: 5%;
-    min-width: 25%;
+    min-width: 20%;
     overflow: hidden;
     border-radius: 5px;
     list-style: none;
@@ -293,4 +311,216 @@ main {
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.black-space {
+    position: absolute;
+    z-index: -99;
+    top: 45%;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    background-color: black;
+    
+}
+
+.hero {
+    position: absolute;
+    top: 105vh;
+    left: 0;
+    width: 100vw;
+    height: 200vh;
+}
+
+.bg-hero {
+    position: absolute;
+    z-index: -99;
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+    background-image: linear-gradient(to bottom, #0db500, #008d0d, #00680f, #00440c, #032300);
+}
+
+.logo-hero {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    z-index: 99;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    width: 20%;
+    height: 10%;
+}
+
+.logo-hero h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    position: relative;
+    left: 2%;
+    cursor: default;
+    font-size: xx-large;
+}
+
+.logo-hero svg {
+    height: 25%;
+    width: 25%;
+    filter: invert(100%);
+    object-fit: cover;
+}
+
+.popular-hero-add {
+    position: relative;
+    top: 10%;
+    left: 5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 90%;
+    height: 20%;
+}
+
+.title-games-carousel-hero-add {
+    position: absolute;
+    top: 9%; 
+    left: 6%;
+    transform: translate(-6%, -9%);
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.games-carousel-hero-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 90%;
+}
+
+.games {
+    display: flex;
+    margin-top: 5%;
+    flex-direction: row;
+    height: 100%;
+    margin-right: 2%;
+    min-width: 20%;
+    overflow: hidden;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.games img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.popular-hero-remove {
+    position: relative;
+    top: 13%;
+    left: 5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 90%;
+    height: 20%;
+}
+
+.title-games-carousel-hero-remove {
+    position: absolute;
+    top: 33%; 
+    left: 6%;
+    transform: translate(-6%, -33%);
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.games-carousel-hero-remove {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 90%;
+}
+
+.games {
+    display: flex;
+    margin-top: 5%;
+    flex-direction: row;
+    height: 100%;
+    margin-right: 2%;
+    min-width: 20%;
+    overflow: hidden;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.genre {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    color: white;
+    height: 20%;
+    width: 90%;
+}
+
+.genre-title {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.genre ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.genre ul li{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:  100px;
+    list-style: none;
+}
+
+.genre-item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2%;
+    margin-right: 1%;
+    background-color: #00680f;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    width: 100%;
+    height:  100%;
+}
+
+.genre-item h2 {
+    display: flex;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 0.99rem;
+}
+
+.logo-genre {
+    position: absolute;
+    top: 2%;
+    left: 75%;
+    width: 2em;
+    height: 2em;
+    fill: white;
+}
+
+.logo-genre svg{
+    height: 100%;
+    height: 100%;
+    object-fit: cover;
 }
